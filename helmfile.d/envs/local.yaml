@@ -1,0 +1,59 @@
+---
+env: "dev"
+dnsDomain: cluster.local
+namespace: "default"
+pullPolicy: IfNotPresent
+imageRegistry: "oligo"
+postgresPassword: postgres
+postgresDatabase: "oligo_platform_db"
+postgresUsername: "postgres"
+postgresReadFromReplicaDb: false
+postgresimageTag: "12"
+postgresEnabled: true
+redisEnabled: true
+redisExternalAccessEnabled: true
+redisPassword: "redis"
+redisPort: 6379
+redisUseTLS: false
+
+
+coralogix:
+  apiKey: "4aa35abf-eb51-3693-4249-1d7131190cb0"
+
+platform:
+  pyroscope:
+    enabled: true
+  backendApi:
+    enabled: false
+    imageTag: "latest"
+    imageName: "backend-api"
+  etl:
+    p1:
+      enabled: false
+    p2:
+      enabled: false
+    imageName: "etl"
+    imageTag: "latest"
+  backendIdentity.enabled: false
+  backendIdentity.imageName: "identity-service"
+  backendIdentity.imageTag: "latest"
+  backendIdentity.database: "identity"
+  keycloak.enabled: true
+  keycloak.database: "keycloak"
+  frontend.enabled: false
+  frontend.imageName: "frontend"
+  frontend.imageTag: "latest"
+  docs.enabled: false
+  docs.imageName: "docs"
+  docs.imageTag: "latest"
+  issuesService.enabled: false
+  issuesService.imageName: "issues-service"
+  issuesService.imageTag: "latest"
+  certManager.enabled: false
+  certManager.email: "oren@oligosecurity.io"
+  jobs:
+    riskCalculator.enabled: false
+    issueNotifier.enabled: false
+    vulnerabilitySummarizer.enabled: false
+    clearLibraryTemporaryExecution.enabled: false
+

@@ -1,0 +1,11 @@
+
+global:
+  postgresql:
+    auth:
+      postgresPassword: {{ .Values | get "postgresPassword" "postgres" }}
+      database: {{ .Values | get "postgresDatabase" "oligo_platform_db" }}
+image:
+  tag: {{ .Values | get "imageTag" "12" }}
+  pullPolicy: 'Always'
+primary:
+  hostNetwork: true

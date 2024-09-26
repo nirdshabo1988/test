@@ -1,0 +1,14 @@
+
+  environments:
+    default:
+      values:
+      - "envs/local.yaml"
+
+  releases:
+    - name: oligo
+      chart: ../deployment/helm
+      atomic: true
+    # when true, cleans up any new resources created during a failed release (default false)
+      cleanupOnFail: true
+      values:
+        - values/platform.values.yaml.gotmpl
