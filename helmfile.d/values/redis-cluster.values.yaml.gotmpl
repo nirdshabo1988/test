@@ -1,4 +1,0 @@
-enabled: {{ .Values | get "redisEnabled" true }}
-image.tag: {{ .Values | get "redisImageTag" "6.2.12-debian-11-r7" }}
-cluster.externalAccess.enabled: {{ .Values | get "redisExternalAccessEnabled" true }}
-password: {{ .Values | get "redisPassword" "redis" }}
