@@ -5,7 +5,6 @@ namespace: "default"
 pullPolicy: IfNotPresent
 imageRegistry: "oligo"
 postgresPassword: postgres
-postgresDatabase: "oligo_platform_db"
 postgresUsername: "postgres"
 postgresReadFromReplicaDb: false
 postgresimageTag: "12"
@@ -16,9 +15,6 @@ redisPassword: "redis"
 redisPort: 6379
 redisUseTLS: false
 
-
-coralogix:
-  apiKey: "4aa35abf-eb51-3693-4249-1d7131190cb0"
 
 platform:
   pyroscope:
@@ -50,7 +46,7 @@ platform:
   issuesService.imageName: "issues-service"
   issuesService.imageTag: "latest"
   certManager.enabled: false
-  certManager.email: "oren@oligosecurity.io"
+  
   jobs:
     riskCalculator.enabled: false
     issueNotifier.enabled: false
