@@ -3,7 +3,7 @@
     default:
       values:
       - "envs/local.yaml"
-
+---
   releases:
     - name: oligo
       chart: ../deployment/helm

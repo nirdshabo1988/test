@@ -1,8 +1,8 @@
 environments:
   default:
     values:
-    - "envs/local.yaml"
-
+      - "envs/local.yaml"
+---
 repositories:
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
@@ -12,4 +12,3 @@ releases:
     installed: false
     values:
       - values/kafka.values.yaml.gotmpl
-
